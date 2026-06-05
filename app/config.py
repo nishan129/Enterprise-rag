@@ -21,7 +21,7 @@ class Settings:
 
     # --- REASONING ENGINE (GROQ) ---
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-    GROQ_MODEL = "llama-3.3-70b-versetile"
+    GROQ_MODEL = "llama-3.3-70b-versatile"
 
      # --- Redis Semantic Cache ---
     REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
