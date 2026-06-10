@@ -54,3 +54,12 @@ logfire[requests]                  # To link Streamlit UI traces to the backend
 loguru                             # Enhanced logging for Python
 
 sentence-transformers
+
+
+# -- GUARDRAILS ---- 
+nemoguardrails                    # NVIDIA NeMo Guardrails for input/output safety rails
+langchain-nvidia-ai-endpoints     # Langchain integration with NVIDIA AI Endpoints
+
+
+# GATEWAYS ---
+portkey-ai
