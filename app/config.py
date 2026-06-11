@@ -24,6 +24,13 @@ class Settings:
     GROQ_MODEL = "llama-3.3-70b-versatile"
     GROQ_FALLBACK_API_KEY = os.getenv("GROQ_FALLBACK_API_KEY")
 
+    # ---- DATABASE & CACHE -----
+    DB_USER = os.getenv("DB_USER",'rag_admin')
+    DB_PASS = os.getenv("DB_PASS")
+    DB_NAME = os.getenv("DB_NAME", "rag_memory")
+    DB_CONNECTION_NAME = os.getenv("DB_CONNECTION_NAME")
+
+
     # ----- LLM GATEWAY 
     PORTKEY_API_KEY = os.getenv("PORTKEY_API_KEY")
     GROQ_SLUG = 'rag'
@@ -33,6 +40,10 @@ class Settings:
     REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
     REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
     USE_SEMANTIC_CACHE = os.getenv("USE_SEMANTIC_CACHE", "false").lower() == "true"
+
+    ## ENVIRONMENT MODE --
+
+    LOCAL_MODE = os.getenv("LOCAL_MODE",'false').lower() == "true"
 
     # --- Observability ---
     LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING", "true")

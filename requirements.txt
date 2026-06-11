@@ -7,6 +7,7 @@
 fastapi                         # High-performance web framework for the web
 uvicorn[standard]               # ASGI server to run the FastAPI app
 python-dotenv                   # For loading configuration from .env.
+python-multipart
 requests                        # HTTP library for interanl/external request
 streamlit                       # Frontend dashboard for the chat interaction
 numpy                           # Numerical processing
@@ -26,14 +27,18 @@ cloud-sql-python-connector          # Secure connection to Cloud SQL (postgres)
 qdrant-client                       # Vector Database for semantic search
 flashrank                           # Ultra-fast local cross-encoder for semantic reranking
 redis                               # Memorystore for semantic caching
+redisvl                             # Python client for Redis Vector Library (Semantic Chching)  
 sqlalchemy                          # ORM for persistent conversation history
 pg8000                              # Postgres driver for cloud SQL
+psycopg[binary]                     # Required driver for langgraph-checkpoint-postgress
+psycopg_pool                        # Connection pooling for high-concurrency memory
 
 # --- LANGCHAIN & AGENTIC ORCHESTRATION ---
 langchain                           # Core LLM Orchestration
 langgraph                           # State- machine logic for cyclic agent flow
 langchain-google-vertexai           # Integration for Google LLMs/Embedding
 langchain-groq                      # Integration for lightning-fast Llama 3.3 models
+langgraph-checkpoint-postgres       # Persistent memory for Langgraph using postgress
 langchain-community                 # Community-contributed tools and loaders
 langchain-openai                    # (Optional) OpenAI compatibility layer
 pydantic>=2.0.0                     # Data validation and settings management
@@ -63,3 +68,9 @@ langchain-nvidia-ai-endpoints     # Langchain integration with NVIDIA AI Endpoin
 
 # GATEWAYS ---
 portkey-ai
+
+
+# --- EVALUATION (EVALS) ----
+ragas
+deepeval
+langfuse
